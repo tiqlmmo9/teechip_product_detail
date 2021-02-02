@@ -365,11 +365,22 @@ for (const listColor of document.querySelectorAll(
 // document
 //   .querySelector(".product-detail__thumb");
 // Hover to change image
+
 document
   .querySelector(".product-detail__thumb")
   .classList.add("selected-thumb");
+
 var myimage = document.getElementById("myimage");
 for (const listImage of document.querySelectorAll(".product-detail__thumb")) {
+  function changeNode() {
+    if (listImage.classList.contains("product-detail__thumb-before")) {
+      document.querySelector(".product-detail__node").innerText = "1/2";
+    }
+    if (listImage.classList.contains("product-detail__thumb-after")) {
+      document.querySelector(".product-detail__node").innerText = "2/2";
+    }
+  }
+
   listImage.addEventListener("mouseout", function() {
     {
       myimage.src = document.querySelector(".selected-thumb img").src;
@@ -382,6 +393,7 @@ for (const listImage of document.querySelectorAll(".product-detail__thumb")) {
       } else {
         myimage.src = "img/regular-after.jpg";
       }
+      changeNode();
     }
   });
   listImage.addEventListener("click", function() {
@@ -399,9 +411,45 @@ for (const listImage of document.querySelectorAll(".product-detail__thumb")) {
       //   .classList.remove("selected-color");
 
       this.classList.add("selected-thumb");
+      changeNode();
+      // console.log(changeNode());
     }
   });
 }
+
+var images = ["regular-before.jpg", "regular-after.jpg"];
+var i = 0;
+
+function prev() {
+  if (i <= 0) i = images.length;
+  i--;
+  console.log(i);
+  setThumb(i);
+  return setImg();
+}
+function next() {
+  if (i >= images.length - 1) i = -1;
+  i++;
+  setThumb(i);
+  return setImg();
+}
+function setImg() {
+  return myimage.setAttribute("src", "img/" + images[i]);
+}
+function setThumb(i) {
+  document
+    .querySelector(".product-detail__item")
+    .querySelector(".selected-thumb")
+    .classList.remove("selected-thumb");
+  document
+    .querySelectorAll(".product-detail__thumb")
+    [i].classList.add("selected-thumb");
+}
+
+
+// document.getElementById("myimage").src = document.querySelector(
+//   ".selected-thumb img"
+// ).src;
 
 //Image zoom when mouseover
 function imageZoom(imgID, resultID) {
@@ -530,3 +578,6 @@ image.addEventListener("mouseleave", function() {
   document.querySelector(".img-zoom-lens").style.display = "none";
   // document.querySelector(".img-zoom-lens").remove(); // remove when mouseleave. Avoid duplicate call function imageZoom.
 });
+
+// Change node
+// document.querySelector(".product-detail__thumb-before.selected-thumb");

@@ -550,6 +550,18 @@ body {
 .product-detail__regular{
   position: relative;
 }
+.product-detail__node{
+  background-color: #636E72;
+  width: 4rem;
+  height: 2rem;
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+
 .product-detail__regular-before{
 
 }
@@ -570,6 +582,34 @@ body {
   pointer-events: none;
   display: none;
 }
+
+.product-detail__swipe-btn{
+  width: 3rem;
+  height: 3rem;
+  background-color: #fafa;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #636E72;
+  cursor: pointer;
+  
+}
+.product-detail__swipe-btn i{
+  font-size: 1.2rem;
+}
+.product-detail__swipe-btn--left {
+  position: absolute;
+  top:50%;
+  left: 0;
+}
+.product-detail__swipe-btn--right {
+  position: absolute;
+  top:50%;
+  right: 0;
+}
+
+
 .img-zoom-result {
   position: absolute;
   top:0;
