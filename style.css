@@ -666,11 +666,19 @@ body {
   height: 70px;
   border: 1px solid #ccc;
   border-radius: 3px;
+  z-index:2;
 }
 .product-detail-select__item img{
   width: 100%;
 }
-
+.product-detail-select__item span{
+  color: transparent;
+  position: absolute;
+}
+.selected-product{
+  border: 1px solid #0984e3;
+  box-shadow: 0 4px 5px 0 rgb(99 110 114 / 14%), 0 1px 10px 0 rgb(99 110 114 / 12%), 0 2px 4px 0 rgb(99 110 114 / 20%);
+}
 .product-detail-color__header{
   display: flex;
   align-items: center;

@@ -359,8 +359,28 @@ for (const listColor of document.querySelectorAll(
       ).innerText = this.querySelector(
         ".product-detail-color__item span"
       ).innerText;
+      changeNow();
     }
   });
+}
+function changeNow() {
+  var navy = ["regular-before.jpg", "regular-after.jpg"];
+  var white = ["regular-white_before.jpg", "regular-white_after.jpg"];
+  if (document.querySelector(".selected-color span").innerText == "Navy") {
+    changeImage(navy);
+  }
+  else if(document.querySelector(".selected-color span").innerText == "White") {
+    changeImage(white);
+  }
+}
+function changeImage(color) {
+  document
+    .querySelector(".product-detail__thumb-before img")
+    .setAttribute("src", "img/" + color[0]);
+  document
+    .querySelector(".product-detail__thumb-after img")
+    .setAttribute("src", "img/" + color[1]);
+  myimage.setAttribute("src", "img/" + color[0]);
 }
 // document
 //   .querySelector(".product-detail__thumb");
@@ -445,7 +465,6 @@ function setThumb(i) {
     .querySelectorAll(".product-detail__thumb")
     [i].classList.add("selected-thumb");
 }
-
 
 // document.getElementById("myimage").src = document.querySelector(
 //   ".selected-thumb img"
@@ -581,3 +600,32 @@ image.addEventListener("mouseleave", function() {
 
 // Change node
 // document.querySelector(".product-detail__thumb-before.selected-thumb");
+
+
+//Change Product item
+document
+  .querySelector(".product-detail-select__item")
+  .classList.add("selected-product");
+
+for(const listProduct of document.querySelectorAll(".product-detail-select__item")){
+  listProduct.addEventListener("click",function(){
+    if(!this.classList.contains("selected-product")){
+      this.parentNode
+        .querySelector(".selected-product").classList
+        .remove("selected-product");
+        this.classList.add("selected-product");
+    }
+  })
+  listProduct.addEventListener("mouseover", function() {
+    document.querySelector(
+      ".product-detail-select__name"
+    ).innerText = this.querySelector(".product-detail-select__item span").innerText;
+  });
+  listProduct.addEventListener("mouseout", function() {
+    document.querySelector(
+      ".product-detail-select__name"
+    ).innerText = document.querySelector(".selected-product").innerText;
+  });
+}
+
+//Mouseover to change image, product_header
