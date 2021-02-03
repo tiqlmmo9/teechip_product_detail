@@ -85,57 +85,89 @@ function insertProduct() {
       document.querySelector(".selected-product img").getAttribute("src") ==
       arr[index].imageProduct[0]
     ) {
-        //Change thumb image
-        document.querySelector(".product-detail__item").innerHTML =
-          '<div class="product-detail__thumb product-detail__thumb-before">                    <img src="' +
-          arr[index].imageProduct[0] +
-          '" alt="">                </div>                <div class="product-detail__thumb product-detail__thumb-after">                    <img src="' +
-          arr[index].imageProduct[1] +
-          '" alt="">                </div>';
-        //Change zoom image
-        document.getElementById("myimage").src = document.querySelector(
-          ".selected-product img"
-        ).src;
-        //Change name
-        document.querySelector(".product-detail__name").innerText =
-          arr[index].nameProduct;
-        //Change price
-        document.querySelector(".product-detail__price").innerText =
-          arr[index].priceProduct;
+      //Change thumb image
+      document.querySelector(".product-detail__item").innerHTML =
+        '<div class="product-detail__thumb product-detail__thumb-before">                    <img src="' +
+        arr[index].imageProduct[0] +
+        '" alt="">                </div>                <div class="product-detail__thumb product-detail__thumb-after">                    <img src="' +
+        arr[index].imageProduct[1] +
+        '" alt="">                </div>';
+      //Change zoom image
+      document.getElementById("myimage").src = document.querySelector(
+        ".selected-product img"
+      ).src;
+      //Change name
+      document.querySelector(".product-detail__name").innerText =
+        arr[index].nameProduct;
+      //Change price
+      document.querySelector(".product-detail__price").innerText =
+        arr[index].priceProduct;
 
-        //Change color
-        // console.log(arr[index].colorProduct);
-        arr[index].colorProduct.forEach(function insertColorProduct(color) {
-          document.querySelector(".product-detail-color__list").innerHTML +=
-            '<div class="product-detail-color__item--rounded">                            <div class="product-detail-color__item product-detail-color__item--' +
-            color.toLowerCase() +
-            '">                                <span>' +
-            color +
-            "</span>                            </div>";
-        });
+      //Change color
+      // console.log(arr[index].colorProduct);
+      arr[index].colorProduct.forEach(function insertColorProduct(color) {
+        document.querySelector(".product-detail-color__list").innerHTML +=
+          '<div class="product-detail-color__item--rounded">                            <div class="product-detail-color__item product-detail-color__item--' +
+          color.toLowerCase() +
+          '">                                <span>' +
+          color +
+          "</span>                            </div>";
+      });
 
-        //Change size
-        arr[index].sizeProduct.forEach(function insertColorProduct(size) {
-          document.querySelector(".product-detail-size__list").innerHTML +=
-            '<div class="product-detail-size__item">                            ' +
-            size +
-            "                        </div>";
-        });
+      //Change size
+      arr[index].sizeProduct.forEach(function insertColorProduct(size) {
+        document.querySelector(".product-detail-size__list").innerHTML +=
+          '<div class="product-detail-size__item">                            ' +
+          size +
+          "                        </div>";
+      });
 
-        //Change qty
+      //Change qty
 
-        for (var i = 1; i <= arr[index].Qty; i++) {
-          document.querySelector(
-            ".product-detail-qty-box__select-box"
-          ).innerHTML +=
-            '<div class="product-detail-qty-box__item">' + i + "</div>";
-        }
-        arr[index].imageProduct.forEach(function changeSlide(sli){
-          // console.log(images = sli);
-          images = sli;
-
-        })
+      for (var i = 1; i <= arr[index].Qty; i++) {
+        document.querySelector(
+          ".product-detail-qty-box__select-box"
+        ).innerHTML +=
+          '<div class="product-detail-qty-box__item">' + i + "</div>";
       }
+
+      //Change slide
+      arr[index].imageProduct.forEach(function changeSlide(sli) {
+        // console.log(images = sli);
+        var i = 0;
+        // console.log(arr[index].imageProduct.length);
+        document
+          .querySelector(".product-detail__swipe-btn--left")
+          .addEventListener("click", function() {
+            if (i <= 0) i = arr[index].imageProduct.length;
+            i--;
+            console.log(i);
+            setThumb(i);
+            // return setImg();
+          });
+        document
+          .querySelector(".product-detail__swipe-btn--right")
+          .addEventListener("click", function() {
+            if (i >= arr[index].imageProduct.length - 1) i = -1;
+            i++;
+            setThumb(i);
+            // return setImg();
+          });
+        // function setImg() {
+        //   return myimage.setAttribute("src", sli);
+        // }
+        function setThumb(i) {
+          document
+            .querySelector(".product-detail__item")
+            .querySelector(".selected-thumb")
+            .classList.remove("selected-thumb");
+          document
+            .querySelectorAll(".product-detail__thumb")
+            [i].classList.add("selected-thumb");
+            myimage.src = document.querySelector(".selected-thumb img").src;
+        }
+      });
+    }
   });
 }
 // for (var i = 0; i < listProductDetail.length; i++) {
@@ -246,10 +278,9 @@ function changeQty() {
   }
 }
 
-
 //
 changeThumb();
-function changeThumb(){
+function changeThumb() {
   document
     .querySelector(".product-detail__thumb")
     .classList.add("selected-thumb");
@@ -297,32 +328,3 @@ function changeThumb(){
 }
 
 //
-console.log(images);
-var images = ["regular-before.jpg", "regular-after.jpg"];
-var i = 0;
-
-function prev() {
-  if (i <= 0) i = images.length;
-  i--;
-  console.log(i);
-  setThumb(i);
-  return setImg();
-}
-function next() {
-  if (i >= images.length - 1) i = -1;
-  i++;
-  setThumb(i);
-  return setImg();
-}
-function setImg() {
-  return myimage.setAttribute("src", "img/" + images[i]);
-}
-function setThumb(i) {
-  document
-    .querySelector(".product-detail__item")
-    .querySelector(".selected-thumb")
-    .classList.remove("selected-thumb");
-  document
-    .querySelectorAll(".product-detail__thumb")
-    [i].classList.add("selected-thumb");
-}
