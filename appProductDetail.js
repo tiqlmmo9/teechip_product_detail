@@ -102,6 +102,7 @@ for (const listProduct of document.querySelectorAll(
     changeSizeProduct();
     // changeColorProduct();
   });
+  
 }
 //insert thumb  first load
 insertProduct();
@@ -320,7 +321,7 @@ function changeQty() {
   }
 }
 
-//
+//Change thumb product
 changeThumb();
 function changeThumb() {
   document

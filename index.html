@@ -17,7 +17,232 @@
 </head>
 
 <body>
+    <div class="app">
+        <!-- start header -->
+        <div class="header">
+            <div class="header__item">
+                <!-- start logo -->
+                <a href="" class="header__logo">
+                    <img src="img/teechip.svg" alt="" class="logo__img">
+                </a>
+                <!-- end logo -->
 
+                <!-- start search -->
+                <div class="search" id="css_search" onclick="toggle_visibility();">
+                    <div class="header__icon" id="css_search_icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <div class="search__transform" id="change_color_search">
+                        <div class="search__transform-item">
+                            <div class="search__placeholder" id="zoom_placeholder">
+                                What are you looking for?
+                            </div>
+                        </div>
+                        <div class="search__input">
+                            <input type="text" class="search__transform--input" id="text_input">
+                            <div class="search-input__line" id="input_line_bottom"></div>
+                        </div>
+                        <div class="search__btn-close" id="btn_close_to_del" onclick="close_to_del();">
+                            <i class="fas fa-times"></i>
+                        </div>
+                    </div>
+                    <!-- start popular searches -->
+                    <div class="search__input-show">
+                        <div class="search__input-show-list" id="search_list">
+                            <div class="search__popular">
+                                Popular Searches
+                            </div>
+                            <div class="search__popular-item">
+                                Family & Relationships
+                            </div>
+                            <div class="search__popular-item">
+                                Animals
+                            </div>
+                            <div class="search__popular-item">
+                                Jobs
+                            </div>
+                            <div class="search__popular-item">
+                                Places
+                            </div>
+                            <div class="search__popular-item search__popular-item--no-border">
+                                Holidays
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end popular searches -->
+
+                    <!-- create modal click anywhere to close search list -->
+                    <!-- <div class="close-search-list" id="close_search_list">
+                    </div> -->
+
+                </div>
+                <!-- end search -->
+
+                <!-- start login -->
+                <a href="" class="login">
+                    <div class="header__icon" onclick="click_to_login(); return false;">
+                        <i class="fas fa-user-circle"></i>
+                        <p class="header__login-text">
+                            Login / Sign Up
+                        </p>
+                    </div>
+                </a>
+                <!-- end login -->
+
+                <!-- start cart -->
+                <a href="" class="cart">
+                    <div class="header__icon">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                </a>
+                <!-- end cart -->
+
+
+
+            </div>
+            <!-- start shopper login -->
+            <div class="shopper-login" id="shopper_login">
+                <div class="shopper-login__item">
+                    <div class="shopper-login__btn-close">
+                        <i class="fas fa-times" onclick="click_to_close();"></i>
+                    </div>
+                    <div class="shopper-login__form">
+                        <h1 class="shopper-login__form__heading">
+                            Shopper Log In
+                        </h1>
+                        <div class="shopper-login__form__seller">
+                            <p class="seller-login">Log into your seller account?</p>
+                            <a href="" class="seller-click">Click here</a>
+                        </div>
+                        <p class="shopper-login__advantage">
+                            Take advantage of the features and benefits that make shopping with TeeChip faster and
+                            easier.
+                        </p>
+                        <button class="shopper-login-btn">
+                            <a href="">Log In</a>
+                        </button>
+                        <button class="shopper-signup-btn">
+                            <a href="">Sign Up</a>
+                        </button>
+                        <div class="text-divider">
+                            <div class="text-divider-line">
+
+                            </div>
+                            <p class="text-divider__continue">
+                                or continue width
+                            </p>
+                        </div>
+
+                        <!-- <button class="shopper-login-facebook-btn">
+                                                <div class="shopper-login-facebook-btn__icon">
+                                                    <i class="fab fa-facebook-f"></i>
+                                                </div>
+                                                <a href="">Facebook</a>
+                                            </button> -->
+                        <button class="shopper-login-facebook-btn">
+                            <div class="fb-login-button" data-width="" data-size="large" data-button-type="login_with"
+                                data-layout="default" data-auto-logout-link="false" data-use-continue-as="false"></div>
+                        </button>
+                        <div class="shopper-login__policy">
+                            By creating an account, you agree to TeeChip's
+                            <a href="" class="shopper-login__term">Terms of Use </a> and
+                            <a href="" class="shopper-login__term">Privacy Policy</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end shopper login -->
+
+        </div>
+        <!-- end header -->
+
+        <!-- start menu -->
+        <div class="navigation">
+            <div class="menu">
+                <div class="menu-item">
+                    <a href="#"></a>Men</Log>
+                    <div class="menu-men">
+                        <div class="menu-men-item">
+                            <a href=""> <b>T-Shirts</b></a>
+                            <a href="">Classic Tees</a>
+                            <a href="">V-Neck Shirts</a>
+                            <a href="">Premium Fitted Tees</a>
+                            <a href="">All Over Unisex Shirts</a>
+                            <a href="">Classic Polo</a>
+                        </div>
+                        <div class="menu-men-item">
+                            <a href=""> <b>Long Sleeves</b></a>
+                            <a href="">Lightweight Jacket</a>
+                            <a href="">Dress shirt</a>
+                        </div>
+                        <div class="menu-men-item">
+                            <a href=""> <b>Tank Tops</b></a>
+                            <a href="">Unisex Tanks</a>
+                            <a href="">All Over Unisex Tanks</a>
+                        </div>
+                        <div class="menu-men-item">
+                            <a href=""> <b>Footwear</b></a>
+                            <a href="">Socks</a>
+                            <a href="">Men's Shoes</a>
+                        </div>
+                        <div class="menu-men-item">
+                            <a href=""> <b>Hoodies</b></a>
+                        </div>
+                        <div class="menu-men-item">
+                            <a href=""> <b>Sweatshirts</b></a>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <a href="#"></a>Women</a>
+                    <div class="menu-women">
+                        <div class="menu-men-item">
+                            <a href=""> <b>T-Shirts</b></a>
+                            <a href="">Ladies Tees</a>
+                            <a href="">Premium Fitted Ladies Tees</a>
+                            <a href="">All Over Unisex Shirts</a>
+                        </div>
+                        <div class="menu-men-item">
+                            <a href=""> <b>Tank Tops</b></a>
+                            <a href="">Unisex Tanks</a>
+                            <a href="">All Over Unisex Tanks</a>
+                        </div>
+                        <div class="menu-men-item">
+                            <a href=""> <b>Footwear</b></a>
+                            <a href="">Socks</a>
+                            <a href="">Women's Shoes</a>
+                        </div>
+                        <div class="menu-men-item">
+                            <a href=""> <b>Long Sleeves</b></a>
+                            <a href=""> <b>Hoodies</b></a>
+                            <a href=""> <b>Sweatshirts</b></a>
+                        </div>
+                        <div class="menu-men-item">
+                            <a href=""> <b>Dresses</b></a>
+                            <a href=""> <b>Long Sleeves</b></a>
+                            <a href=""> <b>Leggings</b></a>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <a href="#"></a>Youth & Baby</a>
+                </div>
+                <div class="menu-item">
+                    <a href="#"></a>Home & Living</a>
+                </div>
+                <div class="menu-item">
+                    <a href="#"></a>Accessories</a>
+                </div>
+                <div class="menu-item">
+                    <a href="#"></a>Jewelry</a>
+                </div>
+            </div>
+        </div>
+        <!-- end menu -->
+    </div>
     <div class="container">
         <!-- start header -->
         <div class="product__header">
@@ -57,7 +282,7 @@
                         <i class="fas fa-chevron-right"></i>
                     </div>
                 </div>
-                
+
                 <!-- <div class="product-detail__regular-before">
                     <img id="myimage" src="img/regular-before.jpg" alt="">
                 </div>
@@ -208,7 +433,7 @@
                     </div>
                 </div>
                 <div class="product-detail__line">
-                
+
                 </div>
                 <div class="product-detail__desc">
                     <div class="product-detail-desc__header">
@@ -232,12 +457,13 @@
                         </li>
                     </ul>
                     <div class="product-detail-desc__note">
-                        All products are made to order and printed to the best standards available. They do not include embellishments, such as
+                        All products are made to order and printed to the best standards available. They do not include
+                        embellishments, such as
                         rhinestones or glitter
                     </div>
                 </div>
                 <div class="product-detail__line">
-                
+
                 </div>
                 <div class="product-detail__shipping">
                     <h3 class="product-detail-shipping__header">
@@ -248,12 +474,14 @@
                             Orders ship within 5 to 10 business days.
                         </div>
                         <div class="product-detail-shipping__item">
-                            Learn more about our shipping rates <a href="" class="product-detail-shipping__rate">here</a> and our returns, refunds, and exchanges policy <a href="" class="product-detail-shipping__policy">here</a>.
+                            Learn more about our shipping rates <a href=""
+                                class="product-detail-shipping__rate">here</a> and our returns, refunds, and exchanges
+                            policy <a href="" class="product-detail-shipping__policy">here</a>.
                         </div>
                     </div>
                 </div>
                 <div class="product-detail__line">
-                
+
                 </div>
                 <div class="product-detail__tag">
                     <h3 class="product-detail-tag__header">
@@ -272,7 +500,7 @@
                     </div>
                 </div>
                 <div class="product-detail__line">
-                
+
                 </div>
                 <a href="" class="product-detail__report">
                     <div class="product-detail-report__icon">
@@ -285,12 +513,266 @@
             </div>
         </div>
     </div>
-
+    <div class="coverable">
+        <!-- start back-to-top button -->
+        <div class="backtotop-btn" onclick="topFunction();">
+            <div class="backtotop-btn__text">Back To Top</div>
+    
+            <div class="backtotop-btn__icon">
+                <i class="fas fa-chevron-up"></i>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="footer-container">
+                <div class="footer__logo">
+                    <img src="img/teechip.svg" alt="">
+                </div>
+                <div class="footer__list">
+                    <div class="footer__item">
+                        <div class="footer-service">
+                            Service
+                        </div>
+                        <a href="" class="footer-service__text">
+                            About Us
+                        </a>
+                        <a href="" class="footer-service__text">
+                            Track Order
+                        </a>
+                        <a href="" class="footer-service__text">
+                            FAQ
+                        </a>
+                        <a href="" class="footer-service__text">
+                            Shipping & Return Polices
+                        </a>
+                        <a href="" class="footer-service__text">
+                            Terms And Conditions
+                        </a>
+                        <a href="" class="footer-service__text">
+                            Privacy Policy
+                        </a>
+                        <a href="" class="footer-service__text">
+                            DMCA
+                        </a>
+                        <a href="" class="footer-service__text">
+                            Contact Us
+                        </a>
+                    </div>
+                    <div class="footer__item">
+                        <div class="footer-service">
+                            Company
+                        </div>
+                        <a href="" class="footer-service__text">
+                            About Us
+                        </a>
+                        <a href="" class="footer-service__text">
+                            Track Order
+                        </a>
+                        <a href="" class="footer-service__text">
+                            FAQ
+                        </a>
+                        <a href="" class="footer-service__text">
+                            Shipping & Return Polices
+                        </a>
+                        <a href="" class="footer-service__text">
+                            Terms And Conditions
+                        </a>
+                        <a href="" class="footer-service__text">
+                            Privacy Policy
+                        </a>
+                        <a href="" class="footer-service__text">
+                            DMCA
+                        </a>
+                        <a href="" class="footer-service__text">
+                            Contact Us
+                        </a>
+                    </div>
+                    <div class="footer__item">
+                        <div class="footer-service">
+                            Need Help
+                        </div>
+                        <a href="" class="footer-service__text">
+                            About Us
+                        </a>
+                        <a href="" class="footer-service__text">
+                            Track Order
+                        </a>
+                        <a href="" class="footer-service__text">
+                            FAQ
+                        </a>
+                        <a href="" class="footer-service__text">
+                            Shipping & Return Polices
+                        </a>
+                        <a href="" class="footer-service__text">
+                            Terms And Conditions
+                        </a>
+                        <a href="" class="footer-service__text">
+                            Privacy Policy
+                        </a>
+                        <a href="" class="footer-service__text">
+                            DMCA
+                        </a>
+                        <a href="" class="footer-service__text">
+                            Contact Us
+                        </a>
+                    </div>
+                    <div class="footer__item">
+                        <div class="select-box box-language">
+                            <div class="custom-select custom-select-box-language">
+                                <div class="select-box__trigger">
+                                    <span class="select-box__text">English (United States)</span>
+                                    <div class="select-box__icon">
+                                        <i class="fas fa-chevron-down"></i>
+                                    </div>
+                                </div>
+    
+                                <div class="select-box-options">
+                                    <div class="select-box__content language">
+                                        <div class="select-box-option selected">
+                                            <div class="select-box-option__text">
+                                                English (United States)
+                                            </div>
+                                            <div class="select-box-option__icon" id="box_icon">
+                                                <i class="fas fa-check"></i>
+                                            </div>
+                                        </div>
+                                        <div class="select-box-option">
+                                            <div class="select-box-option__text">
+                                                English (United Kingdom)
+                                            </div>
+                                            <div class="select-box-option__icon" id="box_icon">
+                                                <i class="fas fa-check"></i>
+                                            </div>
+                                        </div>
+                                        <div class="select-box-option">
+                                            <div class="select-box-option__text">
+                                                English (Canada)
+                                            </div>
+                                            <div class="select-box-option__icon" id="box_icon">
+                                                <i class="fas fa-check"></i>
+                                            </div>
+                                        </div>
+    
+                                    </div>
+    
+                                    <!-- <div class="select-box-option">
+                                                                        <div class="select-box-option__text">
+                                                                            English (United Kingdom)
+                                                                        </div>
+                                                                        <div class="select-box-option__icon">
+                                                                            <i class="fas fa-check"></i>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="select-box-option">
+                                                                        <div class="select-box-option__text">
+                                                                            English (Canada)
+                                                                        </div>
+                                                                        <div class="select-box-option__icon">
+                                                                            <i class="fas fa-check"></i>
+                                                                        </div>
+                                                                    </div> -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="select-box box-currency">
+                            <div class="custom-select custom-select-box-currency">
+                                <div class="select-box__trigger">
+                                    <span class="select-box__text">$ USD</span>
+                                    <div class="select-box__icon">
+                                        <i class="fas fa-chevron-down"></i>
+                                    </div>
+                                </div>
+    
+                                <div class="select-box-options">
+                                    <div class="select-box__content currency">
+                                        <div class="select-box-option selected">
+                                            <div class="select-box-option__text">
+                                                $ USD
+                                            </div>
+                                            <div class="select-box-option__icon">
+                                                <i class="fas fa-check"></i>
+                                            </div>
+                                        </div>
+                                        <div class="select-box-option">
+                                            <div class="select-box-option__text">
+                                                $ CAD
+                                            </div>
+                                            <div class="select-box-option__icon">
+                                                <i class="fas fa-check"></i>
+                                            </div>
+                                        </div>
+                                        <div class="select-box-option">
+                                            <div class="select-box-option__text">
+                                                € EUR
+                                            </div>
+                                            <div class="select-box-option__icon">
+                                                <i class="fas fa-check"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <div class="select-box">
+                                <div class="select-box__item">
+                                    $ USD
+                                </div>
+                                <div class="select-box__icon">
+                                    <i class="fas fa-chevron-down"></i>
+                                </div>
+                            </div> -->
+                        <div class="bbb-icon">
+                            <img src="img/bbb-icon.svg" alt="">
+                        </div>
+                        <div class="payment">
+                            <div class="payment__item">
+                                <img src="img/visa-icon.svg" alt="">
+                            </div>
+                            <div class="payment__item">
+                                <img src="img/mastercard-icon.svg" alt="">
+                            </div>
+                            <div class="payment__item">
+                                <img src="img/amex-icon.svg" alt="">
+                            </div>
+                            <div class="payment__item">
+                                <img src="img/discover-icon.svg" alt="">
+                            </div>
+                            <div class="payment__item">
+                                <img src="img/paypal-icon.svg" alt="">
+                            </div>
+                            <div class="payment__item">
+                                <img src="img/klarna-icon.svg" alt="">
+                            </div>
+                            <div class="payment__item">
+                                <img src="img/giropay-icon.svg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__about">
+                <div class="about__signature">
+                    © 2021 TeeChip
+                </div>
+                <div class="about-item">
+                    <div class="about-item__social">
+                        <i class="fab fa-facebook-square"></i>
+                    </div>
+                    <div class="about-item__social">
+                        <i class="fab fa-twitter-square"></i>
+                    </div>
+                    <div class="about-item__social">
+                        <i class="fab fa-instagram"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end back-to-top button -->
+    </div>
 
     <!-- end product detail -->
     </div>
-    <script src="app.js"></script>
-    <!-- <script src="app2.js"></script> -->
+    <script src="appProductDetail.js"></script>
+    <script src="appFooter.js"></script>
     <!-- <script src="app3.js"></script> -->
 </body>
 
