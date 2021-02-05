@@ -33,21 +33,8 @@ function toggle_visibility() {
   text_input.oninput = function(e) {
     btn_close_to_del.style.display = "flex";
   };
-  // btn_close_to_del.style.display="flex";
-  // var a=document.querySelector("input").value;
-  // console.log(a);
 }
 
-// var inputElement = document.querySelector('input[type="text"]');
-// inputElement.oninput =
-
-// function newFunction() {
-//   if (text_input.value != "") {
-//     btn_close_to_del.style.display = "flex";
-//   } else {
-//     btn_close_to_del.style.display = "none";
-//   }
-// }
 // Click icon x (close) to delete text input
 function close_to_del() {
   text_input.value = "";
@@ -74,27 +61,6 @@ function originPlaceholder() {
   input_line_bottom.style.display = "none";
 }
 
-// When the user clicks anywhere outside of the modal, close it
-// window.onclick = function(event) {
-//   if (!search.contains(event.target)) {
-//     text_input.blur();
-//     originPlaceholder();
-//     // Display none shopper login form
-//     shopper_login.style.display = "none";
-
-//     //Check value input to change search placeholder text
-//     if (text_input.value.trim().length != 0) {
-//       zoom_placeholder.style.fontSize = "0.8rem";
-//       btn_close_to_del.style.display = "flex";
-//     } else {
-//       zoom_placeholder.style.transform = "translateY(+.75rem)";
-//       zoom_placeholder.style.fontSize = "1rem";
-
-//       text_input.value = ""; //delete whitespace to mouse pointer returns to the first position
-//       btn_close_to_del.style.display = "none";
-//     }
-//   }
-// };
 //click login/signup to open form login
 function click_to_login() {
   shopper_login.style.display = "flex";
@@ -224,39 +190,6 @@ window.addEventListener("click", function(e) {
 //   );
 // }
 
-// slideshow
-// var slideIndex = 1;
-// var slides = document.getElementsByClassName("mySlides");
-// var dots = document.getElementsByClassName("dot");
-// showSlides(slideIndex);
-
-// function plusSlides(n) {
-//   showSlides((slideIndex += n));
-// }
-
-// function currentSlide(n) {
-//   showSlides((slideIndex = n));
-// }
-
-// function showSlides(n) {
-//   var i;
-
-//   if (n > slides.length) {
-//     slideIndex = 1;
-//   }
-//   if (n < 1) {
-//     slideIndex = slides.length;
-//   }
-//   for (i = 0; i < slides.length; i++) {
-//     slides[i].style.display = "none";
-//   }
-//   for (i = 0; i < dots.length; i++) {
-//     dots[i].className = dots[i].className.replace("active", "");
-//   }
-//   slides[slideIndex - 1].style.display = "block";
-//   dots[slideIndex - 1].className += " active";
-// }
-// end slideshow
 
 // back to top
 function topFunction() {
